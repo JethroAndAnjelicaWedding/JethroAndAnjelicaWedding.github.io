@@ -118,7 +118,8 @@
 							<h1>Aldrick Jethro &amp; Anjelica</h1>
 							<h2 id="getting-married">We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="images/couple-6.JPG" download="images/couple-6.JPG" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>
+							<p><a class="btn btn-default btn-sm" onclick="downloadImage()">Save the date</a></p>
+<!--							<p><a href="images/couple-6.JPG" download="images/couple-6.JPG" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>-->
 
 						</div>
 					</div>
@@ -240,7 +241,7 @@
 									<p>We were both Student Assistants in our school, we were not close back then, when we usually cross paths, we just smile at each other.
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-2.JPG);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">From Acquaintances to Friends</h3>
@@ -252,7 +253,7 @@
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.JPG);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">The Journey of Love</h3>
@@ -265,7 +266,7 @@
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-4.JPG);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-4.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">First Date</h3>
@@ -291,7 +292,7 @@
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-6.JPG);"></div>
+							<div class="timeline-badge" style="background-image:url(images/couple-6.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">The Proposal</h3>
@@ -693,6 +694,27 @@
 <!--        }-->
 <!--    });-->
 </script>
+
+	<script>
+		function downloadImage() {
+          const imageUrl = 'images/couple-6.JPG';
+
+          // Create an invisible anchor element
+          const anchor = document.createElement('a');
+          anchor.style.display = 'none';
+          anchor.href = imageUrl;
+          anchor.download = 'downloaded-image.jpg';
+
+          // Append the anchor element to the document
+          document.body.appendChild(anchor);
+
+          // Trigger a click on the anchor element
+          anchor.click();
+
+          // Remove the anchor element from the document
+          document.body.removeChild(anchor);
+        }
+	</script>
 
 	</body>
 </html>
