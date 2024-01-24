@@ -116,9 +116,9 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Aldrick Jethro &amp; Anjelica</h1>
-							<h2>We Are Getting Married</h2>
+							<h2 id="getting-married">We Are Getting Married</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="images/couple-6.JPG" download="images/couple-6.JPG" class="btn btn-default btn-sm">Save the date</a></p>
+							<p><a href="images/couple-6.JPG" download="images/couple-6.JPG" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>
 
 						</div>
 					</div>
@@ -663,19 +663,30 @@
         enableUtc: false,
         onEnd: function() {
 			document.querySelector('.simply-countdown').style.display = 'none';
+			document.getElementById('save-the-date').style.display = 'none';
+
+			// Check if the countdown has already ended
+			if (new Date() > new Date(2024, 10 - 1, 12 + 1)) {
+				// Update the text content of the <h2> element again
+				document.getElementById('getting-married').innerHTML = 'We got Married!';
+			} else {
+				// Update the text content of the <h2> element after the countdown ends
+				document.getElementById('getting-married').innerHTML = 'We are getting married TODAY!';
+			}
         }
     });
 
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false,
-        onEnd: function() {
-			document.querySelector('.simply-countdown').style.display = 'none';
-        }
-    });
+<!--    //jQuery example-->
+<!--    $('#simply-countdown-losange').simplyCountdown({-->
+<!--        year: d.getFullYear(),-->
+<!--        month: d.getMonth() + 1,-->
+<!--        day: d.getDate(),-->
+<!--        enableUtc: false,-->
+<!--        onEnd: function() {-->
+<!--			document.querySelector('.simply-countdown').style.display = 'none';-->
+<!--			document.getElementById('save-the-date').style.display = 'none';-->
+<!--        }-->
+<!--    });-->
 </script>
 
 	</body>
