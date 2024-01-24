@@ -699,20 +699,24 @@
 		function downloadImage() {
           const imageUrl = 'images/couple-6.JPG';
 
-          // Create an invisible anchor element
-          const anchor = document.createElement('a');
-          anchor.style.display = 'none';
-          anchor.href = imageUrl;
-          anchor.download = 'downloaded-image.jpg';
+     // Fetch the image as a blob
+    fetch(imageUrl)
+      .then(response => response.blob())
+      .then(blob => {
+        // Create a temporary link element
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'downloaded-image.jpg';
 
-          // Append the anchor element to the document
-          document.body.appendChild(anchor);
+        // Append the link to the document
+        document.body.appendChild(link);
 
-          // Trigger a click on the anchor element
-          anchor.click();
+        // Trigger a click on the link
+        link.click();
 
-          // Remove the anchor element from the document
-          document.body.removeChild(anchor);
+        // Remove the link from the document
+        document.body.removeChild(link);
+      });
         }
 	</script>
 
