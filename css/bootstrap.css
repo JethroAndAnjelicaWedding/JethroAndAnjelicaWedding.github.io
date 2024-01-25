@@ -6255,3 +6255,18 @@ button.close {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
+
+.responsive-iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+}
+
+.responsive-iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
