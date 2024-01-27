@@ -60,6 +60,8 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -69,7 +71,7 @@
 
 	</head>
 	<body>
-	<audio controls>
+	<audio controls class="plyr" id="myAudio">
 		<source src="/music/Lover.mp3" type="audio/mp3">
 		Your browser does not support the audio element.
 	</audio>
@@ -691,24 +693,9 @@
       });
         }
 	</script>
+	<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
 	<script>
-		// Add this script at the end of your body section
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true
-        });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        updatePhotoCount('gallery1');
-        updatePhotoCount('gallery2');
-        updatePhotoCount('gallery3'); // Add more albums as needed
-    });
-
-    function updatePhotoCount(galleryName) {
-        var albumPhotos = document.querySelectorAll('[data-lightbox="' + galleryName + '"].album-photo');
-        var photoCount = albumPhotos.length + 1;
-        document.getElementById('photoCount' + galleryName.charAt(galleryName.length - 1)).textContent = photoCount + ' Photos';
-    }
+		const player = new Plyr('#myAudio');
 	</script>
 
 	</body>
