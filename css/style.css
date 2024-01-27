@@ -1841,4 +1841,13 @@ form label {
   opacity: 0;
 }
 
+.custom-link {
+    color: white;
+}
+
+/* Color on hover */
+.custom-link:hover {
+    color: old rose; /* Change to the desired color on hover */
+}
+
 /*# sourceMappingURL=style.css.map */
