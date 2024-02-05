@@ -55,12 +55,21 @@
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link href="css/lightbox.css" rel="stylesheet" />
+
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
 	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+
+<!-- Include Glighbox CSS -->
+	<link rel="stylesheet" href="css/glightbox.min.css">
+
+<!-- Include jQuery (required by Glighbox) -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Include Glighbox JS -->
+	<script src="js/glightbox.min.js"></script>
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -326,55 +335,77 @@
 
 		<div id="fh5co-gallery" class="fh5co-section-gray">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-						<span>Our Memories</span>
-						<h2>Gallery</h2>
-					</div>
-				</div>
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-12">
 						<ul id="fh5co-gallery-list" class="fh5co-gallery">
+							<!-- Gallery 1 -->
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
 								<div class="album-container" style="background-image: url('images/gallery-1.jpg'); background-size: 100%;">
-									<a href="images/gallery-1.jpg" data-lightbox="gallery1">
+									<a href="images/gallery-1.jpg" data-glightbox="gallery1" >
 										<div class="case-studies-summary">
 											<span id="photoCount1">Loading...</span>
 											<h2>Random</h2>
 										</div>
 									</a>
-									<a href="images/gallery-2.jpg" data-lightbox="gallery1" class="album-photo" style="display: none;"></a>
-									<a href="images/gallery-3.jpg" data-lightbox="gallery1" class="album-photo" style="display: none;"></a>
+									<a href="images/gallery-2.jpg" data-glightbox="gallery1" class="album-photo" style="display: none;"></a>
+									<a href="images/gallery-3.jpg" data-glightbox="gallery1" class="album-photo" style="display: none;"></a>
 								</div>
 							</li>
+
+							<!-- Gallery 2 -->
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<div class="album-container" style="background-image: url('images/gallery-4.jpg');background-size: 150%;">
-									<a href="images/gallery-4.jpg" data-lightbox="gallery2">
+								<div class="album-container" style="background-image: url('images/gallery-4.jpg'); background-size: 150%;">
+									<a href="images/gallery-4.jpg" data-glightbox="gallery2">
 										<div class="case-studies-summary">
 											<span id="photoCount2">Loading...</span>
 											<h2>Prenup</h2>
 										</div>
 									</a>
-									<a href="images/gallery-5.jpg" data-lightbox="gallery2" class="album-photo" style="display: none;"></a>
-									<a href="images/gallery-6.jpg" data-lightbox="gallery2" class="album-photo" style="display: none;"></a>
+									<a href="images/gallery-5.jpg" data-glightbox="gallery2" class="album-photo" style="display: none;"></a>
+									<a href="images/gallery-6.jpg" data-glightbox="gallery2" class="album-photo" style="display: none;"></a>
 								</div>
 							</li>
+
+							<!-- Gallery 3 -->
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<div class="album-container" style="background-image: url('images/gallery-7.jpg');background-size: 100%;">
-									<a href="images/gallery-7.jpg" data-lightbox="gallery3">
+								<div class="album-container" style="background-image: url('images/gallery-7.jpg'); background-size: 100%;">
+									<a href="images/gallery-7.jpg" data-glightbox="gallery3">
 										<div class="case-studies-summary">
 											<span id="photoCount3">Loading...</span>
 											<h2>Wedding</h2>
 										</div>
 									</a>
-									<a href="images/gallery-8.JPG" data-lightbox="gallery3" class="album-photo" style="display: none;"></a>
+									<a href="images/gallery-8.JPG" data-glightbox="gallery3" class="album-photo" style="display: none;"></a>
 								</div>
 							</li>
+							<li class="one-third animate-box" data-animate-effect="fadeIn">
+								<div class="album-container">
+									<a href="https://www.youtube.com/embed/2KN2IvgwVx0" data-glightbox="gallery4" class="video-option">
+										<div class="case-studies-summary">
+											<span id="photoCount4">Loading...</span>
+											<h2>Videos</h2>
+										</div>
+									</a>
+									<a href="https://www.youtube.com/embed/NvYhaAe2TWc" data-glightbox="gallery4" class="video-option" style="display: none;">
+										<span>Video 2</span>
+									</a>
+								</div>
+							</li>
+
+
 						</ul>
+
 					</div>
-				</div>
+
+<!--					&lt;!&ndash; YouTube Video Overlay &ndash;&gt;-->
+<!--					<div id="youtube-video-container">-->
+<!--						<span id="close-button" onclick="hideYouTubeVideo()">Close</span>-->
+<!--						<iframe id="youtube-video-iframe" width="80%" height="80%" frameborder="0" allowfullscreen style="margin: auto; display: block;"></iframe>-->
+<!--					</div>-->
 			</div>
 		</div>
+	</div>
+
 
 
 		<!--	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">-->
@@ -630,7 +661,8 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<script src="js/lightbox.js"></script>
+
+
 
 	<script>
     var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
@@ -672,31 +704,75 @@
 <!--        }-->
 <!--    });-->
 </script>
-
 	<script>
-		function downloadImage() {
-          const imageUrl = 'images/couple-6.JPG';
+		document.addEventListener('DOMContentLoaded', function () {
+            const lightbox1 = GLightbox({
+                selector: '[data-glightbox="gallery1"]',
+                loop: true
+            });
 
-     // Fetch the image as a blob
-    fetch(imageUrl)
-      .then(response => response.blob())
-      .then(blob => {
-        // Create a temporary link element
-        const link = document.createElement('a');
-        link.href = window.URL.createObjectURL(blob);
-        link.download = 'downloaded-image.jpg';
+            const lightbox2 = GLightbox({
+                selector: '[data-glightbox="gallery2"]'
+            });
 
-        // Append the link to the document
-        document.body.appendChild(link);
+            const lightbox3 = GLightbox({
+                selector: '[data-glightbox="gallery3"]'
+            });
 
-        // Trigger a click on the link
-        link.click();
+            const lightbox4 = GLightbox({
+                selector: '[data-glightbox="gallery4"]',
+                touchNavigation: true,
+            	loop: true, // Enable looping through media
+            	autoplayVideos: false,
+          	    openEffect: 'zoom' // Set the opening effect to fade
+          	    //preload: 0
 
-        // Remove the link from the document
-        document.body.removeChild(link);
-      });
+            });
+
+
+            // Initial count update
+            updatePhotoCount('gallery1');
+            updatePhotoCount('gallery2');
+            updatePhotoCount('gallery3');
+            updatePhotoCount('gallery4');
+        });
+
+        function updatePhotoCount(galleryName) {
+            var albumPhotos = document.querySelectorAll('[data-glightbox="' + galleryName + '"]');
+            var photoCount = albumPhotos.length;
+            document.getElementById('photoCount' + galleryName.charAt(galleryName.length - 1)).textContent = photoCount + ' ' + (photoCount === 1 ? 'Video' : 'Videos');
         }
+
+    // Function to hide YouTube video overlay
+    function hideYouTubeVideo() {
+        document.getElementById('youtube-video-container').style.display = 'none';
+        document.getElementById('youtube-video-iframe').src = '';
+    }
 	</script>
+<!--	<script>-->
+<!--		function downloadImage() {-->
+<!--          const imageUrl = 'images/couple-6.JPG';-->
+
+<!--     // Fetch the image as a blob-->
+<!--    fetch(imageUrl)-->
+<!--      .then(response => response.blob())-->
+<!--      .then(blob => {-->
+<!--        // Create a temporary link element-->
+<!--        const link = document.createElement('a');-->
+<!--        link.href = window.URL.createObjectURL(blob);-->
+<!--        link.download = 'downloaded-image.jpg';-->
+
+<!--        // Append the link to the document-->
+<!--        document.body.appendChild(link);-->
+
+<!--        // Trigger a click on the link-->
+<!--        link.click();-->
+
+<!--        // Remove the link from the document-->
+<!--        document.body.removeChild(link);-->
+<!--      });-->
+<!--        }-->
+<!--	</script>-->
 	<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
 	<script>
 		const player = new Plyr('#myAudio');

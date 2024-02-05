@@ -1851,3 +1851,38 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
+       /* Style for the YouTube video container */
+        #youtube-video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            z-index: 9999; /* Higher z-index to overlay other content */
+            display: none; /* Initially hidden */
+        }
+
+        /* Style for the close button */
+        #close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Style for the video selector */
+        #video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .video-option {
+            margin: 10px;
+            cursor: pointer;
+            color: #fff;
+        }
