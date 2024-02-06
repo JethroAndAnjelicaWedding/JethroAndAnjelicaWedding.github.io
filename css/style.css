@@ -1886,3 +1886,17 @@ form label {
             cursor: pointer;
             color: #fff;
         }
+/* Temporary disables RSVP */
+ .iframe-container {
+   position: relative;
+ }
+
+ .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0); /* Adjust the alpha value for the desired opacity */
+   pointer-events: auto;
+ }
