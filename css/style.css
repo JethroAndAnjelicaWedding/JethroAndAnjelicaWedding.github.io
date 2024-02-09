@@ -1900,3 +1900,12 @@ form label {
    background-color: rgba(0, 0, 0, 0); /* Adjust the alpha value for the desired opacity */
    pointer-events: auto;
  }
+ /* Color palette */
+  .color-box {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    display: inline-block;
+    border-radius: 50%; /* Make the shape circular */
+    border: 1px solid #000;
+  }
