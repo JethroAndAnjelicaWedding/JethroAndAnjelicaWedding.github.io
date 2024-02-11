@@ -123,9 +123,9 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<br><br><br><h1>Aldrick Jethro &amp; Anjelica</h1>
-							<h2 id="getting-married">We Are Getting Married this October</h2>
+							<h2 id="getting-married">We Are Getting Married in ...</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-<!--							<p class="btn btn-default btn-sm">Save the date</p>-->
+							<p class="btn btn-default btn-sm">Save the date</p>
 <!--							<p><a href="images/couple-6.jpg" download="invitation.jpg" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>-->
 							<br><h2>Welcome to our wedding invite website! We made it for a limited number of special people to us, and you're one of them! Have a look around, and we hope you can RSVP by the end of your visit. Enjoy!</h2>
 
@@ -141,7 +141,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2 id="greeting"></h2>
-					<h3>You're invited to celebrate our wedding on October 2024, in Sariaya, Quezon.</h3>
+					<h3>You're invited to celebrate our wedding on the tentative date of October 12, 2024, in Sariaya, Quezon. We hope you can join us for this special occasion!</h3>
 					<p>We hope you can join us for this special occasion!</p>
 				</div>
 			</div>
@@ -361,7 +361,7 @@
 							</li>
 							<!-- Gallery 6 -->
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<div class="album-container" style="background-image: url('images/Tagaytay/tagaytay1.jpg'); background-size: 145%;">
+								<div class="album-container" style="background-image: url('images/Tagaytay/tagaytay1.jpg'); background-size: 150%;">
 									<a href="images/Tagaytay/tagaytay1.jpg" data-glightbox="gallery2">
 										<div class="case-studies-summary">
 											<span id="photoCount2">Loading...</span>
@@ -381,7 +381,7 @@
 							</li>
 							<!-- Gallery 7 -->
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<div class="album-container" style="background-image: url('images/Illumina/illumina1.jpg'); background-size: 145%;">
+								<div class="album-container" style="background-image: url('images/Illumina/illumina1.jpg'); background-size: 150%;">
 									<a href="images/Illumina/illumina1.jpg" data-glightbox="gallery3">
 										<div class="case-studies-summary">
 											<span id="photoCount3">Loading...</span>
@@ -400,7 +400,7 @@
 								</div>
 							</li>
 							<li class="one-third animate-box" data-animate-effect="fadeIn">
-								<div class="album-container" style="background-image: url('images/subic.jpg'); background-size: 100%;">
+								<div class="album-container" style="background-image: url('images/subic.jpg'); background-size: 160%;">
 									<a href="https://www.youtube.com/embed/pE7cFl0W1tI?autoplay=1&vq=hd1440" data-glightbox="gallery4">
 										<div class="case-studies-summary">
 											<!--											<span id="photoCount9">Loading...</span>-->
@@ -833,20 +833,20 @@
 
         year: 2024,
         month: 10,
-        day: 01,
+        day: 12,
         enableUtc: false,
         onEnd: function() {
 			document.querySelector('.simply-countdown').style.display = 'none';
 			document.getElementById('save-the-date').style.display = 'none';
 
 			// Check if the countdown has already ended
-<!--			if (new Date() > new Date(2024, 10 - 1, 12 + 1)) {-->
-<!--				// Update the text content of the <h2> element again-->
-<!--				document.getElementById('getting-married').innerHTML = 'We got Married!';-->
-<!--			} else {-->
-<!--				// Update the text content of the <h2> element after the countdown ends-->
-<!--				document.getElementById('getting-married').innerHTML = 'We are getting married TODAY!';-->
-<!--			}-->
+			if (new Date() > new Date(2024, 10 - 1, 12 + 1)) {
+				// Update the text content of the <h2> element again
+				document.getElementById('getting-married').innerHTML = 'We got Married!';
+			} else {
+				// Update the text content of the <h2> element after the countdown ends
+				document.getElementById('getting-married').innerHTML = 'We are getting married TODAY!';
+			}
         }
     });
 
