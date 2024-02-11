@@ -127,7 +127,7 @@
 							<div class="simply-countdown simply-countdown-one"></div>
 							<p class="btn btn-default btn-sm">Save the date</p>
 <!--							<p><a href="images/couple-6.jpg" download="invitation.jpg" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>-->
-							<br><h2>This is our wedding invitation website, which we personally created and is exclusively for a limited number of people who are special to us. You are one of them! Please enjoy the content, and by the end of your visit, we hope you'll be able to respond to our invitation. Enjoy!</h2>
+							<br><h2>Welcome to our wedding invite website! We made it exclusively to just for a few special people, and you're one of them! Have a look around, and we hope you can RSVP by the end of your visit. Enjoy!</h2>
 
 						</div>
 					</div>
@@ -140,7 +140,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Hello!</h2>
+					<h2 id="greeting"></h2>
 					<h3>on 12th of October 2024 (Tentative date) at Sariaya, Quezon</h3>
 					<p>We invite you to celebrate our wedding</p>
 				</div>
@@ -626,45 +626,6 @@
 
 <!--		</div>-->
 <!--	</div>-->
-
-
-	<div id="fh5co-started">
-<!--		<div class="overlay"></div>-->
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Let Us Know</h2>
-					<p>Please Fill-up the form to notify us. Thanks.</p>
-				</div>
-			</div>
-
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<form class="form-inline">
-<!--						<div class="col-md-4 col-sm-4">-->
-<!--							<div class="form-group">-->
-<!--								<label for="name" class="sr-only">Name</label>-->
-<!--								<input type="name" class="form-control" id="name" placeholder="Name">-->
-<!--							</div>-->
-<!--						</div>-->
-						<div class="col-md-12 col-sm-12">
-							<div class="iframe-container">
-								<iframe width="400" height="1200" src="https://docs.google.com/forms/d/e/1FAIpQLSfUpSPzIaSxmcIk9D8FtO8YM9gSZYIm5d-RUcpr4_mWSXOClg/viewform?embedded=true">Loading…</iframe>
-<!--								<div class="overlay"></div>-->
-						</div>
-<!--							<div class="form-group">-->
-<!--								<label for="email" class="sr-only">Email</label>-->
-<!--								<input type="email" class="form-control" id="email" placeholder="Email">-->
-<!--							</div>-->
-						</div>
-<!--						<div class="col-md-4 col-sm-4">-->
-<!--							<button type="submit" class="btn btn-default btn-block">I am Attending</button>-->
-<!--						</div>-->
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
 		<div id="fh5co-testimonial">
 			<div class="container">
 				<div class="row">
@@ -685,7 +646,7 @@
 											</figure>
 											<span style="font-size: 25px;">Do we really need to RSVP?</span>
 											<blockquote>
-												<p>Yes. This will help us finalize the headcount for catering and seating arrangement. Please fill up the form above to notify us.
+												<p>Yes. This will help us finalize the headcount for catering and seating arrangement. Please fill up the form below to notify us.
 
 													<br><br>I RSVP'd YES but can't come or RSVP'd NO but has a change of circumstances: Please let us know ASAP so we can try to accomodate for any changes.</p>
 											</blockquote>
@@ -799,6 +760,45 @@
 				</div>
 			</div>
 		</div>
+
+	<div id="fh5co-started">
+<!--		<div class="overlay"></div>-->
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Let Us Know</h2>
+					<p>Please Fill-up the form to notify us. Thanks.</p>
+				</div>
+			</div>
+
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<form class="form-inline">
+<!--						<div class="col-md-4 col-sm-4">-->
+<!--							<div class="form-group">-->
+<!--								<label for="name" class="sr-only">Name</label>-->
+<!--								<input type="name" class="form-control" id="name" placeholder="Name">-->
+<!--							</div>-->
+<!--						</div>-->
+						<div class="col-md-12 col-sm-12">
+							<div class="iframe-container">
+								<iframe width="400" height="1200" src="https://docs.google.com/forms/d/e/1FAIpQLSfUpSPzIaSxmcIk9D8FtO8YM9gSZYIm5d-RUcpr4_mWSXOClg/viewform?embedded=true">Loading…</iframe>
+<!--								<div class="overlay"></div>-->
+						</div>
+<!--							<div class="form-group">-->
+<!--								<label for="email" class="sr-only">Email</label>-->
+<!--								<input type="email" class="form-control" id="email" placeholder="Email">-->
+<!--							</div>-->
+						</div>
+<!--						<div class="col-md-4 col-sm-4">-->
+<!--							<button type="submit" class="btn btn-default btn-block">I am Attending</button>-->
+<!--						</div>-->
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 		<div id="fh5co-services">
 				<div class="container">
@@ -1017,6 +1017,22 @@
 	<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
 	<script>
 		const player = new Plyr('#myAudio');
+	</script>
+	<script>
+		// Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Get the value of the 'value' parameter
+        const value = urlParams.get('name');
+
+        // Set a default value if no value is provided
+		const defaultValue = 'Hello!';
+
+		if (value && value.trim() !== '') {
+			document.getElementById('greeting').textContent += `Hello ${value} !`;
+		} else {
+			document.getElementById('greeting').textContent += ` ${defaultValue}`;
+		}
 	</script>
 
 	</body>
