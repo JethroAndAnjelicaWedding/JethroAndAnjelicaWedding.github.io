@@ -123,9 +123,9 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<br><br><br><h1>Aldrick Jethro &amp; Anjelica</h1>
-							<h2 id="getting-married">We Are Getting Married in ...</h2>
+							<h2 id="getting-married">We Are Getting Married this October</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p class="btn btn-default btn-sm">Save the date</p>
+<!--							<p class="btn btn-default btn-sm">Save the date</p>-->
 <!--							<p><a href="images/couple-6.jpg" download="invitation.jpg" class="btn btn-default btn-sm" id="save-the-date">Save the date</a></p>-->
 							<br><h2>Welcome to our wedding invite website! We made for a limited number of special people to us, and you're one of them! Have a look around, and we hope you can RSVP by the end of your visit. Enjoy!</h2>
 
@@ -141,7 +141,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2 id="greeting"></h2>
-					<h3>You're invited to celebrate our wedding on the tentative date of October 12, 2024, in Sariaya, Quezon.</h3>
+					<h3>You're invited to celebrate our wedding on October 2024, in Sariaya, Quezon.</h3>
 					<p>We hope you can join us for this special occasion!</p>
 				</div>
 			</div>
@@ -633,7 +633,7 @@
 												<div class="color-box" style="background-color: #C08081;"></div>
 												<div class="color-box" style="background-color: #F5F5DC;"></div>
 												<div class="color-box" style="background-color: #D3D3D3;"></div>
-												<p>Please avoid wearing white or black, slippers, and shorts. Your chic outfits will add to the joy of our special day!</p>
+												<p>Please avoid wearing white outfits, slippers, and shorts. Your chic outfits will add to the joy of our special day!</p>
 											</blockquote>
 										</div>
 									</div>
@@ -833,20 +833,20 @@
 
         year: 2024,
         month: 10,
-        day: 12,
+        day: 01,
         enableUtc: false,
         onEnd: function() {
 			document.querySelector('.simply-countdown').style.display = 'none';
 			document.getElementById('save-the-date').style.display = 'none';
 
 			// Check if the countdown has already ended
-			if (new Date() > new Date(2024, 10 - 1, 12 + 1)) {
-				// Update the text content of the <h2> element again
-				document.getElementById('getting-married').innerHTML = 'We got Married!';
-			} else {
-				// Update the text content of the <h2> element after the countdown ends
-				document.getElementById('getting-married').innerHTML = 'We are getting married TODAY!';
-			}
+<!--			if (new Date() > new Date(2024, 10 - 1, 12 + 1)) {-->
+<!--				// Update the text content of the <h2> element again-->
+<!--				document.getElementById('getting-married').innerHTML = 'We got Married!';-->
+<!--			} else {-->
+<!--				// Update the text content of the <h2> element after the countdown ends-->
+<!--				document.getElementById('getting-married').innerHTML = 'We are getting married TODAY!';-->
+<!--			}-->
         }
     });
 
