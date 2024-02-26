@@ -1,5 +1,5 @@
 $font-primary: 'Work Sans', Arial, sans-serif;
-$font-secondary: 'Sacramento', Arial, serif;
+$font-secondary: 'Dancing Script', Arial, serif;
 
 
 // Overrides
@@ -315,6 +315,7 @@ h1, h2, h3, h4, h5, h6, figure {
 // }
 #fh5co-counter,
 #fh5co-event,
+#fh5co-entourage,
 .fh5co-bg {
 	background-size: cover;
 	background-position: top center;
@@ -433,6 +434,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-counter,
+#fh5co-entourage,
 #fh5co-event {
 	height: 850px;
 	float: left;
@@ -1006,6 +1008,7 @@ form {
 #fh5co-started,
 #fh5co-footer,
 #fh5co-event,
+#fh5co-entourage,
 #fh5co-couple-story,
 #fh5co-couple,
 #fh5co-gallery,
