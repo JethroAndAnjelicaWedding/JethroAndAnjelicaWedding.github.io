@@ -1053,6 +1053,12 @@ form label {
   padding: 7em 0;
   clear: both;
 }
+
+#fh5co-wedding-timeline,
+.fh5co-section {
+  padding: 3em 0;
+  margin-bottom: -5em;
+}
 @media screen and (max-width: 768px) {
   #fh5co-testimonial,
   #fh5co-services,
@@ -1063,6 +1069,7 @@ form label {
   #fh5co-couple-story,
   #fh5co-couple,
   #fh5co-gallery,
+  #fh5co-wedding-timeline,
   .fh5co-section {
     padding: 3em 0;
   }
@@ -1962,7 +1969,6 @@ form label {
     margin: 2px;
     display: inline-block;
     border-radius: 50%; /* Make the shape circular */
-    border: 1px solid #000;
   }
 
    /* Shadow */
@@ -1970,4 +1976,35 @@ form label {
     text-shadow: 4px 4px 6px rgba(0,0,0,0.5);
 
    }
+
+   /* games */
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+        transition: all 0.3s ease;
+    }
+    .card:hover {
+        background-color: #e0e0e0;
+    }
+    .matched {
+        background-color: green;
+        color: white;
+        pointer-events: none;
+    }
+    .hidden {
+        visibility: hidden;
+    }
 
