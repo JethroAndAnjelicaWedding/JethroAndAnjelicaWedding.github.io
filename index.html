@@ -935,7 +935,7 @@
 					<p><br>If you have further inquiries or need to get in touch,
 						<br> you can reach us via the following:<br>
 					<ul class="fh5co-social-icons">
-						<li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=ajethro02@gmail.com&su=Wedding%20Inquiry"><i class="icon-mail"></i> ajethro02@gmail.com</a></li>
+						<li><a href="mailto:ajethro02@gmail.com?subject=Wedding%20Inquiry" onclick="composeEmail()"><i class="icon-mail"></i> ajethro02@gmail.com</a></li>
 						<li><a href="https://m.me/JethzZ"><i class="icon-facebook"></i> Aldrick Jethro Formaran</a></li>
 						<li><a href="sms:09611669614"><i class="icon-phone"></i> 09611669614</a></li>
 					</ul>
@@ -1305,7 +1305,18 @@
             displayScoreboard([]);
         }
 	</script>
+	<script>
+		function composeEmail(event) {
+            event.preventDefault(); // Prevent the default action of following the link
+            var recipient = "ajethro02@gmail.com";
+            var subject = "Wedding Inquiry";
+            var body = ""; // You can add a default body if needed
 
+            var mailtoLink = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+        }
+	</script>
 
 	</body>
 </html>
