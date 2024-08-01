@@ -1062,6 +1062,7 @@ form label {
 #fh5co-couple-story,
 #fh5co-couple,
 #fh5co-gallery,
+#fh5co-suppliers,
 .fh5co-section {
   padding: 7em 0;
   clear: both;
@@ -1075,6 +1076,7 @@ form label {
 @media screen and (max-width: 768px) {
   #fh5co-testimonial,
   #fh5co-services,
+  #fh5co-suppliers,
   #fh5co-started,
   #fh5co-footer,
   #fh5co-event,
@@ -1393,6 +1395,59 @@ form label {
   }
 }
 .feature-left .feature-copy h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #5d5d5d;
+  margin-bottom: 10px;
+}
+
+.feature-right {
+  float: right;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+.feature-right:last-child {
+  margin-bottom: 0;
+}
+.feature-right .icon {
+  float: left;
+  margin-right: 5%;
+  width: 54px;
+  height: 54px;
+  background: #fff;
+  display: table;
+  text-align: center;
+  -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .feature-right .icon {
+    margin-right: 5%;
+  }
+}
+.feature-right .icon i {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 30px;
+  color: #C08081;
+}
+.feature-right .feature-copy {
+  float: left;
+  width: 80%;
+}
+@media screen and (max-width: 768px) {
+  .feature-right .feature-copy {
+    width: 70%;
+    float: left;
+  }
+}
+.feature-right .feature-copy h3 {
   text-transform: uppercase;
   font-size: 18px;
   color: #5d5d5d;

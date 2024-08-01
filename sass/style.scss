@@ -1005,6 +1005,7 @@ form {
 
 #fh5co-testimonial,
 #fh5co-services,
+#fh5co-suppliers,
 #fh5co-started,
 #fh5co-footer,
 #fh5co-event,
@@ -1309,6 +1310,54 @@ form {
 			margin-bottom: 10px;
 		}
 		
+	}
+}
+
+.feature-right {
+	float: right;
+	width: 100%;
+	margin-bottom: 30px;
+	position: relative;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.icon {
+		float: left;
+		margin-right: 5%;
+		width: 54px;
+		height: 54px;
+		background: $brand-white;
+		display: table;
+		text-align: center;
+		-webkit-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
+		box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
+
+		@include border-radius(50%);
+		@media screen and (max-width: $screen-sm) {
+			margin-right: 5%;
+		}
+		i {
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 30px;
+			color: $brand-primary;
+		}
+	}
+	.feature-copy {
+		float: right;
+		width: 80%;
+		@media screen and (max-width: $screen-sm) {
+			width: 70%;
+			float: left;
+		}
+		h3 {
+			text-transform: uppercase;
+			font-size: 18px;
+			color: #5d5d5d;
+			margin-bottom: 10px;
+		}
+
 	}
 }
 
