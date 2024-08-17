@@ -2076,3 +2076,85 @@ form label {
         visibility: hidden;
     }
 
+    body {
+        background-color: #f0f0f0;
+        margin: 0;
+    }
+
+    .page-flip-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .book {
+        width:450px;  /* Adjust width as needed */
+        height: 900px; /* Adjust height as needed */
+        position: relative;
+        perspective: 3000px; /* Increase perspective for larger pages */
+    }
+    .page {
+        width: 450px;
+        height: 670px;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid #ccc;
+        transform-origin: left center;
+        transition: transform 1s;
+        backface-visibility: hidden;
+    }
+
+    .page1 {
+        background-image: url('../images/invitation/1.jpg'); /* Replace with your actual file path */
+        z-index: 3;
+        transform: rotateY(0deg);
+    }
+
+    .page2 {
+        background-image: url('../images/invitation/2.jpg'); /* Replace with your actual file path */
+        z-index: 2;
+        transform: rotateY(180deg);
+    }
+
+    .page3 {
+        background-image: url('../images/invitation/3.jpg'); /* Replace with your actual file path */
+        z-index: 1;
+        transform: rotateY(180deg);
+    }
+
+    .page4 {
+        background-image: url('../images/invitation/4.jpg'); /* Replace with your actual file path */
+        z-index: 0;
+        transform: rotateY(180deg);
+    }
+
+    .controls {
+        margin-top: 20px;
+    }
+
+    .control-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #C08081; /* old rose background */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .control-button:hover {
+        background-color: #A64D4D; /* Darker old rose */
+    }
+
+    .control-button:active {
+        transform: scale(0.95); /* Slightly shrink the button when clicked */
+    }
+
+
