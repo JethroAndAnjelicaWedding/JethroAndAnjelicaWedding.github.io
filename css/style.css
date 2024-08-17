@@ -2090,13 +2090,13 @@ form label {
     }
 
     .book {
-        width:400px;  /* Adjust width as needed */
+        width:410px;  /* Adjust width as needed */
         height: 900px; /* Adjust height as needed */
         position: relative;
         perspective: 3000px; /* Increase perspective for larger pages */
     }
     .page {
-        width: 100%;
+        width: 90%;
         height: 100%;
         position: absolute;
         top: 15px;
