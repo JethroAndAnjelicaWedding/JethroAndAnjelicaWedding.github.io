@@ -1310,6 +1310,10 @@ form label {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+#fh5co-testimonial .wrap-testimony .testimony-slide img {
+  width: 30%;
+
+}
 #fh5co-testimonial .wrap-testimony .testimony-slide blockquote {
   border: none;
   margin: 30px auto;
@@ -1325,6 +1329,14 @@ form label {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 992px) {
+  #fh5co-testimonial .wrap-testimony .testimony-slide img {
+    width: 70%;
+  }
+}
+
+
 #fh5co-testimonial .wrap-testimony .testimony-slide blockquote p {
   font-style: italic;
   color: #8f989f;
@@ -2159,5 +2171,10 @@ form label {
     .control-button:active {
         transform: scale(0.95); /* Slightly shrink the button when clicked */
     }
+
+    .owl-carousel .owl-item img {
+        display: inline !important; /* Forces the override */
+    }
+
 
 
